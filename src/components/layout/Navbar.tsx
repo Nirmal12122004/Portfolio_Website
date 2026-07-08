@@ -124,7 +124,7 @@ export default function Navbar({ theme, toggleTheme }: Props) {
               </motion.button>
 
               <motion.a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Nirmal_Patel_Resume.pdf"
                 className="hidden md:flex btn-primary text-sm py-2 px-4"
                 whileHover={{ scale: 1.02 }}
@@ -178,7 +178,7 @@ export default function Navbar({ theme, toggleTheme }: Props) {
               ))}
 
               <motion.a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Nirmal_Patel_Resume.pdf"
                 className="mt-4 btn-primary justify-center py-3"
                 initial={{ opacity: 0 }}

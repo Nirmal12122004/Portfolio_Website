@@ -141,7 +141,7 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
             >
               <motion.a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Nirmal_Patel_Resume.pdf"
                 className="btn-primary"
                 whileHover={{ scale: 1.03 }}
