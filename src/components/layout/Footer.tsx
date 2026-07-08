@@ -69,7 +69,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Nirmal Patel. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
-            Built with <Heart size={11} className="text-red-500 mx-0.5" /> using React, TypeScript & Framer Motion
+            Built using React, TypeScript & Framer Motion
           </p>
         </div>
       </div>
