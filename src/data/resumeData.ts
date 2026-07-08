@@ -10,7 +10,7 @@ export const personalInfo = {
   github: 'https://github.com/nirmal12122004/',
   linkedin: 'https://www.linkedin.com/in/connect-nirmal-patel/',
   cgpa: '9.18',
-  photo: '/assets/images/Profile_Photo.jpg',
+  photo: `${import.meta.env.BASE_URL}assets/images/Profile_Photo.jpg`,
 }
 
 export const education = [
