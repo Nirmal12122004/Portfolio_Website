@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { MapPin, Mail, Phone, GraduationCap, Briefcase, Code2, Brain } from 'lucide-react'
+import { MapPin, Mail, GraduationCap, Briefcase, Code2, Brain } from 'lucide-react'
 import { personalInfo } from '../../data/resumeData'
 import SectionWrapper from '../ui/SectionWrapper'
 
@@ -16,7 +16,6 @@ const highlights = [
   { label: 'University', value: 'Ahmedabad Institute of Technology (GTU)' },
   { label: 'Location', value: 'Ahmedabad, Gujarat, India' },
   { label: 'Email', value: personalInfo.email },
-  { label: 'Phone', value: personalInfo.phone },
   { label: 'Status', value: 'Open to Opportunities' },
 ]
 
@@ -87,10 +86,6 @@ export default function About() {
                   <Mail size={14} className="text-purple-400" />
                   {personalInfo.email}
                 </a>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-xl glass border border-white/10 text-zinc-400 text-sm">
-                  <Phone size={14} className="text-blue-400" />
-                  {personalInfo.phone}
-                </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-xl glass border border-white/10 text-zinc-400 text-sm">
                   <MapPin size={14} className="text-green-400" />
                   {personalInfo.location}

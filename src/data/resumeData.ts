@@ -6,7 +6,6 @@ export const personalInfo = {
   tagline: 'Quick Learner & Tech Fanatic',
   bio: "I'm a passionate AI/ML Developer and Software Engineer based in Ahmedabad, Gujarat. With a CGPA of 9.18 in B.E. Information Technology, I blend academic excellence with hands-on project experience. I specialize in Machine Learning, Deep Learning, Agentic AI, Computer Vision, and modern Web Development. I love building intelligent systems and impactful projects that solve real-world problems.",
   email: 'connect.nirmalpatel@gmail.com',
-  phone: '+91 7861998957',
   location: 'Ahmedabad, Gujarat, India',
   github: 'https://github.com/nirmal12122004/',
   linkedin: 'https://www.linkedin.com/in/connect-nirmal-patel/',
