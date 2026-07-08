@@ -100,7 +100,8 @@ export default function Contact() {
       )
       setStatus({ type: 'success', message: "Message sent! I'll get back to you soon." })
       setForm({ name: '', email: '', subject: '', message: '' })
-    } catch {
+    } catch (err) {
+      console.error('EmailJS send failed:', err)
       // Fallback: open mailto
       const mailto = `mailto:${personalInfo.email}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`From: ${form.name} (${form.email})\n\n${form.message}`)}`
       window.location.href = mailto
