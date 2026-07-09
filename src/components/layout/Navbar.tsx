@@ -20,15 +20,25 @@ export default function Navbar({ theme, toggleTheme }: Props) {
   }, [])
 
   useEffect(() => {
+    const ratios = new Map<string, number>()
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+          ratios.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0)
+        })
+
+        let bestId = ''
+        let bestRatio = 0
+        ratios.forEach((ratio, id) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio
+            bestId = id
           }
         })
+        if (bestId) setActiveSection(bestId)
       },
-      { threshold: 0.3, rootMargin: '-80px 0px -80px 0px' },
+      { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], rootMargin: '-80px 0px -80px 0px' },
     )
 
     navLinks.forEach(({ href }) => {
@@ -124,7 +134,7 @@ export default function Navbar({ theme, toggleTheme }: Props) {
               </motion.button>
 
               <motion.a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href="/resume.pdf"
                 download="Nirmal_Patel_Resume.pdf"
                 className="hidden md:flex btn-primary text-sm py-2 px-4"
                 whileHover={{ scale: 1.02 }}
@@ -178,7 +188,7 @@ export default function Navbar({ theme, toggleTheme }: Props) {
               ))}
 
               <motion.a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                href="/resume.pdf"
                 download="Nirmal_Patel_Resume.pdf"
                 className="mt-4 btn-primary justify-center py-3"
                 initial={{ opacity: 0 }}
