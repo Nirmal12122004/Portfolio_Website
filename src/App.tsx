@@ -5,7 +5,6 @@ import { Toaster } from 'react-hot-toast'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import LoadingScreen from './components/ui/LoadingScreen'
-import CustomCursor from './components/ui/CustomCursor'
 import ScrollProgress from './components/ui/ScrollProgress'
 
 import Hero from './components/sections/Hero'
@@ -53,7 +52,6 @@ export default function App() {
       <LoadingScreen isLoading={isLoading} />
       {!isLoading && (
         <>
-          <CustomCursor />
           <ScrollProgress />
           <Navbar theme={theme} toggleTheme={toggleTheme} />
           <Routes>
